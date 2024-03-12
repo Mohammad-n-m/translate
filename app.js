@@ -4,7 +4,7 @@ let translate_btn=$.querySelector('.search')
 let add_items_in_it=$.querySelector('.zarf_button')
 let Audio_word= $.querySelector('.sound_word')
 let tags_P_append= $.querySelector('.appended_word')
-
+let btn_sound=$.querySelector('.play_sound')
 
 function fetch_get_item(){
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${UserInput.value}`)
@@ -46,7 +46,7 @@ function SetData(item){
     $.querySelector('.items_pronunciation').innerHTML=item[0].phonetic;
 
    Audio_word.setAttribute('src',audio_src)
-    Audio_word.play();
+   play_sound_word()
 // console.log(item)
 
 
@@ -75,9 +75,20 @@ function SetData(item){
 }
 
 
+
+function play_sound_word(){
+    Audio_word.play();
+}
+
+
 $.body.addEventListener('keydown',(e)=>{
     if(e.keyCode==13){
         fetch_get_item()
     }})
 
+
 translate_btn.addEventListener('click',()=>{fetch_get_item()})
+
+
+
+btn_sound.addEventListener('click', play_sound_word)
