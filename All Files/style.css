@@ -1,0 +1,88 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.zarf{
+    min-width: 40%;
+    max-width: 75%;
+    min-height: 60%;
+    border: 3px solid rgb(0, 6, 167);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 80px blue;
+    color: rgb(255, 255, 255);
+    font-style:italic;
+}
+.zarf_top,.zarf_botton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.UserInput{
+    width: 80%;
+    outline: none;
+    border: 2px solid rgba(34, 0, 255, 0.77);
+    border-radius: 0.5rem;
+font-size: 16px;
+padding: 0.5rem;
+color: rgb(0, 0, 158);
+transition: all 0.3s;
+background-color: rgb(174, 173, 176);
+}
+
+.UserInput:hover{
+background-color: rgb(255, 255, 255);
+}
+
+.btn{
+max-width: 30%;
+min-width: 30%;
+height: 3rem;
+border-radius: 0.5rem;
+background-color: rgb(22, 0, 147);
+cursor: pointer;
+color: rgb(255, 255, 255);
+transition: all 0.3s;
+}
+.btn:hover{
+    background-color: rgb(38, 0, 255);
+}
+img{
+    width: 30px;
+    height: 20px;
+}
+
+.zarf_botton{
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.items_pronunciation,.zarf_detail{
+margin-bottom:2rem;
+
+}
+.items_word{
+font-weight: bold;
+}
+.items_pronunciation{
+color: rgb(139, 135, 148);
+}
+
+.appended_files{
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 3px solid blue;
+}
+.border_button{
+    border-bottom: 3px solid rgb(0, 162, 255);
+    margin-bottom: 2rem;
+}
